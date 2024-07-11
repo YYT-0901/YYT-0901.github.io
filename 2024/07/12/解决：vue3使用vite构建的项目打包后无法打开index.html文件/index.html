@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>New World Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="解决：vue3使用vite构建的项目打包后无法打开index.html文件一步一步来，先做前面两步应该就可以了，还是不可以就第三步 1. 文件路径不对 2. 跨域问题vite构建打包后，默认启用ES Module，跨module加载引用涉及跨域，file:&#x2F;&#x2F;…没有跨域的定义需要安装vite插件@vitejs&#x2F;plugin-legacynpm i @vitejs&#x2F;pl">
+<meta property="og:type" content="article">
+<meta property="og:title" content="New World Blog">
+<meta property="og:url" content="http://example.com/2024/07/12/%E8%A7%A3%E5%86%B3%EF%BC%9Avue3%E4%BD%BF%E7%94%A8vite%E6%9E%84%E5%BB%BA%E7%9A%84%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E5%90%8E%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80index.html%E6%96%87%E4%BB%B6/index.html">
+<meta property="og:site_name" content="New World Blog">
+<meta property="og:description" content="解决：vue3使用vite构建的项目打包后无法打开index.html文件一步一步来，先做前面两步应该就可以了，还是不可以就第三步 1. 文件路径不对 2. 跨域问题vite构建打包后，默认启用ES Module，跨module加载引用涉及跨域，file:&#x2F;&#x2F;…没有跨域的定义需要安装vite插件@vitejs&#x2F;plugin-legacynpm i @vitejs&#x2F;pl">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/2748975/202310/2748975-20231026140451687-1075786687.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/2748975/202310/2748975-20231026174844867-282661550.png">
+<meta property="article:published_time" content="2024-07-11T16:19:00.730Z">
+<meta property="article:modified_time" content="2024-05-12T08:41:17.997Z">
+<meta property="article:author" content="YYT">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img2023.cnblogs.com/blog/2748975/202310/2748975-20231026140451687-1075786687.png">
+  
+    <link rel="alternate" href="/atom.xml" title="New World Blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">New World Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">新世界博客</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS 订阅"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="搜索"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-解决：vue3使用vite构建的项目打包后无法打开index.html文件" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/07/12/%E8%A7%A3%E5%86%B3%EF%BC%9Avue3%E4%BD%BF%E7%94%A8vite%E6%9E%84%E5%BB%BA%E7%9A%84%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E5%90%8E%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80index.html%E6%96%87%E4%BB%B6/" class="article-date">
+  <time class="dt-published" datetime="2024-07-11T16:19:00.730Z" itemprop="datePublished">2024-07-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="解决：vue3使用vite构建的项目打包后无法打开index-html文件"><a href="#解决：vue3使用vite构建的项目打包后无法打开index-html文件" class="headerlink" title="解决：vue3使用vite构建的项目打包后无法打开index.html文件"></a>解决：vue3使用vite构建的项目打包后无法打开index.html文件</h1><p>一步一步来，先做前面两步应该就可以了，还是不可以就第三步</p>
+<h2 id="1-文件路径不对"><a href="#1-文件路径不对" class="headerlink" title="1. 文件路径不对"></a>1. 文件路径不对</h2><p><img src="https://img2023.cnblogs.com/blog/2748975/202310/2748975-20231026140451687-1075786687.png" alt="image"></p>
+<h2 id="2-跨域问题"><a href="#2-跨域问题" class="headerlink" title="2. 跨域问题"></a>2. 跨域问题</h2><p>vite构建打包后，默认启用ES Module，跨module加载引用涉及跨域，file:&#x2F;&#x2F;…没有跨域的定义<br>需要安装vite插件@vitejs&#x2F;plugin-legacy<br><code>npm i @vitejs/plugin-legacy -D</code><br>安装成功之后在vit.config.js引入并使用</p>
+<p><img src="https://img2023.cnblogs.com/blog/2748975/202310/2748975-20231026174844867-282661550.png" alt="image"></p>
+<h2 id="3-路由问题"><a href="#3-路由问题" class="headerlink" title="3. 路由问题"></a>3. 路由问题</h2><p>这个查阅资料发现如果以上两个方法还灭解决的话可以试一下更改路由方式把rutour的history模式改为 hash模式（因为hash模式不会走服务器，而是在本地直接处理） vue3的项目需要在 router &#x2F; index.js 里更改</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import &#123; createRouter, createWebHistory,createWebHashHistory &#125; from &#x27;vue-router&#x27;</span><br><span class="line">import Home from &#x27;../views/Home.vue&#x27;</span><br><span class="line"></span><br><span class="line">const router = createRouter(&#123;</span><br><span class="line">  // history: createWebHistory(process.env.BASE_URL),</span><br><span class="line">  history: createWebHashHistory(),</span><br><span class="line">  routes</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/07/12/%E8%A7%A3%E5%86%B3%EF%BC%9Avue3%E4%BD%BF%E7%94%A8vite%E6%9E%84%E5%BB%BA%E7%9A%84%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E5%90%8E%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80index.html%E6%96%87%E4%BB%B6/" data-id="clyhh54c700086cuhceth9y66" data-title="" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2024/07/12/%E9%9D%99%E6%80%81%E6%88%90%E5%91%98/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2024/07/12/%E9%9B%86%E6%88%90%E6%94%AF%E4%BB%98%E5%AE%9D/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/07/">七月 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/07/12/%E5%9C%A8%E6%96%87%E4%BB%B6%E5%A4%B9%E5%8F%B3%E9%94%AE%E6%B7%BB%E5%8A%A0%E2%80%9COpen%20Folder%20as%20XXX%E2%80%9D/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2024/07/12/%E9%9D%99%E6%80%81%E6%88%90%E5%91%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2024/07/12/%E8%A7%A3%E5%86%B3%EF%BC%9Avue3%E4%BD%BF%E7%94%A8vite%E6%9E%84%E5%BB%BA%E7%9A%84%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E5%90%8E%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80index.html%E6%96%87%E4%BB%B6/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2024/07/12/%E9%9B%86%E6%88%90%E6%94%AF%E4%BB%98%E5%AE%9D/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2024/07/12/vue3/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 YYT<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

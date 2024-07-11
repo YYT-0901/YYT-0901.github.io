@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>New World Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="shell whoami - 问服务器我是谁，返回用户名  pwd - present working directory，返回当前文件夹路径  ls - list, 列出当前文件夹下的内容  clear - 清空命令界面  python3 - python的入口,后面跟上文件表示执行文件  ↑ - 键盘键, 可以看回上一条命令  ↓ - 对应上面  ctrl + a - 光标跳去开头  ctrl">
+<meta property="og:type" content="article">
+<meta property="og:title" content="New World Blog">
+<meta property="og:url" content="http://example.com/2024/07/12/shell/index.html">
+<meta property="og:site_name" content="New World Blog">
+<meta property="og:description" content="shell whoami - 问服务器我是谁，返回用户名  pwd - present working directory，返回当前文件夹路径  ls - list, 列出当前文件夹下的内容  clear - 清空命令界面  python3 - python的入口,后面跟上文件表示执行文件  ↑ - 键盘键, 可以看回上一条命令  ↓ - 对应上面  ctrl + a - 光标跳去开头  ctrl">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/image-20240419121723881.png">
+<meta property="article:published_time" content="2024-07-11T16:19:00.712Z">
+<meta property="article:modified_time" content="2024-04-19T05:06:59.415Z">
+<meta property="article:author" content="YYT">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/image-20240419121723881.png">
+  
+    <link rel="alternate" href="/atom.xml" title="New World Blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">New World Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">新世界博客</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS 订阅"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="搜索"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-shell" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/07/12/shell/" class="article-date">
+  <time class="dt-published" datetime="2024-07-11T16:19:00.712Z" itemprop="datePublished">2024-07-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="shell"><a href="#shell" class="headerlink" title="shell"></a>shell</h1><ul>
+<li><p><strong>whoami</strong> - 问服务器我是谁，返回用户名</p>
+</li>
+<li><p><strong>pwd</strong> - present working directory，返回当前文件夹路径</p>
+</li>
+<li><p><strong>ls</strong> - list, 列出当前文件夹下的内容</p>
+</li>
+<li><p><strong>clear</strong> - 清空命令界面</p>
+</li>
+<li><p><strong>python3</strong> - python的入口,后面跟上文件表示执行文件</p>
+</li>
+<li><p><strong><code>↑</code></strong> - 键盘键, 可以看回上一条命令</p>
+</li>
+<li><p><strong><code>↓</code></strong> - 对应上面</p>
+</li>
+<li><p><strong><code>ctrl</code> + <code>a</code></strong> - 光标跳去开头</p>
+</li>
+<li><p><strong><code>ctrl</code> + <code>e</code></strong> - 光标跳去结尾</p>
+</li>
+<li><p><strong>vi</strong> {file} - 进入编辑器，空格后面可以跟上文件名</p>
+</li>
+<li><p><strong>ls -lh</strong> {file} - 查看文件信息</p>
+</li>
+<li><p><strong>cat</strong> - concatenate(拼接),查看文件内容</p>
+</li>
+<li><p><strong>cp</strong> {file1} {file2} - 复制文件</p>
+</li>
+<li><p><strong>rm</strong> {file} - 删除文件</p>
+</li>
+<li><p><strong>mkdir</strong> [-p] {folder} - 创建目录</p>
+<blockquote>
+<p>-p 加上表示创建多级目录</p>
+<p>例子: <code>mkdir -p folder1/folder2/folder3</code></p>
+</blockquote>
+</li>
+</ul>
+<h1 id="python3"><a href="#python3" class="headerlink" title="python3"></a>python3</h1><ul>
+<li><strong>quit()</strong> - 退出(ctrl + d)</li>
+<li><strong>help(<code>arg</code>)</strong> - 返回arg函数的说明</li>
+</ul>
+<h1 id="vim"><a href="#vim" class="headerlink" title="vim"></a>vim</h1><ul>
+<li><p><strong>i</strong> &#x2F; <strong>a</strong> &#x2F; <strong>o</strong> - 正常模式下点击进入插入模式</p>
+<p><img src="/img/image-20240419121723881.png" alt="image-20240419121723881"></p>
+</li>
+<li><p><strong><code>Shift</code> + <code>;</code></strong> (:) - 正常模式进入底层命令模式</p>
+</li>
+<li><p>[n]<strong>yy</strong> - 复制[n]行内容,默认1</p>
+</li>
+<li><p>[n]<strong>p</strong> - 粘贴[n]次内容</p>
+</li>
+<li><p><strong>dd</strong> - 删除一行内容</p>
+</li>
+<li><p><strong>gg</strong> - 光标跳到第一行</p>
+</li>
+<li><p><strong>GG</strong> - 光标跳到最后一行</p>
+</li>
+<li><p><strong>&#x2F; + [查找的单词]</strong>[\c] - 查找单词,区分大小写(使用n&#x2F;N来看下一个匹配的单词)</p>
+<blockquote>
+<p><code>/</code> - 向下查找</p>
+<p><code>?</code> - 向上查找</p>
+<p>\c - 加上表示不区分大小写</p>
+</blockquote>
+</li>
+<li><p><strong>u</strong> - 撤销</p>
+</li>
+</ul>
+<h3 id="插入模式"><a href="#插入模式" class="headerlink" title="插入模式"></a>插入模式</h3><ul>
+<li><strong><code>Esc</code></strong> - 插入模式下点击返回正常模式</li>
+</ul>
+<h3 id="底层命令"><a href="#底层命令" class="headerlink" title="底层命令"></a>底层命令</h3><ul>
+<li><p><code>Esc</code> - 底层命令模式下点击返回正常模式</p>
+</li>
+<li><p><strong>w</strong> - 保存文件</p>
+</li>
+<li><p><strong>q</strong> - 返回shell</p>
+</li>
+<li><p><strong>help</strong> - 获取帮助</p>
+</li>
+<li><p><strong>set number</strong> &#x2F; <strong>set nu</strong> - 显示行号</p>
+</li>
+<li><p><strong>set nonumber</strong> - 关闭显示行号</p>
+</li>
+<li><p>[n] - 光标跳转到第[n]行</p>
+</li>
+<li><p>[<n1>],[<n2>]s&#x2F;[<old>]&#x2F;[<new>]&#x2F;[g] - 替换文本</p>
+<blockquote>
+<p>将第n1行到第n2的old替换成new</p>
+<p>g - 加上表示这一行上的所有</p>
+<p>不写n1,n2则作用在光标行</p>
+<p>可以使用 1,$ 表示全部行</p>
+</blockquote>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/07/12/shell/" data-id="clyhh54c500056cuhbi1y151o" data-title="" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2024/07/12/vue3/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2024/07/12/scrapy%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/07/">七月 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/07/12/%E5%9C%A8%E6%96%87%E4%BB%B6%E5%A4%B9%E5%8F%B3%E9%94%AE%E6%B7%BB%E5%8A%A0%E2%80%9COpen%20Folder%20as%20XXX%E2%80%9D/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2024/07/12/%E9%9D%99%E6%80%81%E6%88%90%E5%91%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2024/07/12/%E8%A7%A3%E5%86%B3%EF%BC%9Avue3%E4%BD%BF%E7%94%A8vite%E6%9E%84%E5%BB%BA%E7%9A%84%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E5%90%8E%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80index.html%E6%96%87%E4%BB%B6/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2024/07/12/%E9%9B%86%E6%88%90%E6%94%AF%E4%BB%98%E5%AE%9D/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2024/07/12/vue3/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 YYT<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

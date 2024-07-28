@@ -165,7 +165,7 @@
       
         <a class="archive-link" href="/archives/2024/07 ">
           七月 2024 
-          <div class="archive-count">7 </div>
+          <div class="archive-count">8 </div>
         </a>
       
     </div>
@@ -178,6 +178,12 @@
     <div class="widget">
       <h3 class="widget-title">最新文章</h3>
       <ul>
+        
+          <a class="recent-link" href="/2024/07/28/%E8%A7%A3%E5%86%B3%EF%BC%9Avue3%E4%BD%BF%E7%94%A8vite%E6%9E%84%E5%BB%BA%E7%9A%84%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E5%90%8E%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80index-html%E6%96%87%E4%BB%B6/" title="解决：vue3使用vite构建的项目打包后无法打开index.html文件" >
+            <div class="recent-link-text">
+              解决：vue3使用vite构建的项目打包后无法打开index.html文件
+            </div>
+          </a>
         
           <a class="recent-link" href="/2024/07/18/Easybbs%E9%A1%B9%E7%9B%AE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="Easybbs项目学习笔记" >
             <div class="recent-link-text">
@@ -203,12 +209,6 @@
             </div>
           </a>
         
-          <a class="recent-link" href="/2024/07/12/git%E5%85%B6%E4%BB%96%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/" title="git其他使用文档" >
-            <div class="recent-link-text">
-              git其他使用文档
-            </div>
-          </a>
-        
       </ul>
     </div>
   </div>
@@ -219,6 +219,85 @@
     </div>
     <div id="content-body">
       
+   
+
+
+<article id="post-解决：vue3使用vite构建的项目打包后无法打开index-html文件" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2024/07/28/%E8%A7%A3%E5%86%B3%EF%BC%9Avue3%E4%BD%BF%E7%94%A8vite%E6%9E%84%E5%BB%BA%E7%9A%84%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E5%90%8E%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80index-html%E6%96%87%E4%BB%B6/">解决：vue3使用vite构建的项目打包后无法打开index.html文件</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2024-07-28T14:41:26.116Z" itemprop="datePublished">2024-07-28</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+    未分类 
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            799 词 
+          </div>
+        </div>
+        
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            
+              解决：vue3使用vite构建的项目打包后无法打开index.html文件一步一步来，先做前面两步应该就可以了，还是不可以就第三步
+1. 文件路径不对
+2. 跨域问题vite构建打包后，默认启用ES Module，跨module加载引用涉及跨域，file:&#x2F;&#x2F;…没有跨域的定义需要安装vite插件@vitejs&#x2F;plugin-legacynpm i @vitejs/plugin-legacy -D安装成功之后在vite.config.js引入并使用
+
+1import legacy from &quot;@vitejs/plugin-legacy&quot;
+
+1234legacy(&#123;			targets: [&quot;ie &gt;= 11&quot;],			additionalModernPolyfills: [&quot;regenerator-runtime/runtime&quot;],		&#125;),
+
+3. 路由问题这个查阅资料发现如果以上两个方法还灭解决的话可以试一下更改路由方式把rutour的history模式改为 h...
+            
+          </div>
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2024/07/28/%E8%A7%A3%E5%86%B3%EF%BC%9Avue3%E4%BD%BF%E7%94%A8vite%E6%9E%84%E5%BB%BA%E7%9A%84%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E5%90%8E%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80index-html%E6%96%87%E4%BB%B6/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+
+
+
+
+
+
    
 
 

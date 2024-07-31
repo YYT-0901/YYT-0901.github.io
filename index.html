@@ -165,7 +165,7 @@
       
         <a class="archive-link" href="/archives/2024/07 ">
           七月 2024 
-          <div class="archive-count">8 </div>
+          <div class="archive-count">9 </div>
         </a>
       
     </div>
@@ -178,6 +178,12 @@
     <div class="widget">
       <h3 class="widget-title">最新文章</h3>
       <ul>
+        
+          <a class="recent-link" href="/2024/07/31/JAVA%E5%8F%8D%E5%B0%84/" title="JAVA反射" >
+            <div class="recent-link-text">
+              JAVA反射
+            </div>
+          </a>
         
           <a class="recent-link" href="/2024/07/28/%E8%A7%A3%E5%86%B3%EF%BC%9Avue3%E4%BD%BF%E7%94%A8vite%E6%9E%84%E5%BB%BA%E7%9A%84%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E5%90%8E%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80index-html%E6%96%87%E4%BB%B6/" title="解决：vue3使用vite构建的项目打包后无法打开index.html文件" >
             <div class="recent-link-text">
@@ -203,12 +209,6 @@
             </div>
           </a>
         
-          <a class="recent-link" href="/2024/07/12/MySQL%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/" title="MySQL" >
-            <div class="recent-link-text">
-              MySQL
-            </div>
-          </a>
-        
       </ul>
     </div>
   </div>
@@ -219,6 +219,97 @@
     </div>
     <div id="content-body">
       
+   
+
+
+<article id="post-JAVA反射" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2024/07/31/JAVA%E5%8F%8D%E5%B0%84/">JAVA反射</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2024-07-31T10:52:31.756Z" itemprop="datePublished">2024-07-31</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+    未分类 
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            6.7k 词 
+          </div>
+        </div>
+        
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            
+              允许在运行时检查和操作类、方法、字段等结构。反射机制主要包含在 java.lang.reflect 包中，它使得程序可以在运行时动态地获取类的信息，并且调用对象的方法或访问对象的字段。
+
+
+获取class对象
+在这个class对象再获取Field，Constuctor，Method对象
+再获取这些对象的所有信息（扒干扒净）
+
+
+获取class对象(字节码文件对象)的三种方法
+Class.forName(&quot;全类名&quot;)
+1234567891011&gt; 全类名: 包名+类名&gt;&gt; 最常用&gt;&gt; &gt;&gt; 例子: &gt;&gt; ```java&gt; Class clazz = Class.forName(&quot;com.test.Student&quot;);
+
+
+
+类名.class
+123456789&gt; 更多是当作参数进行传参&gt;&gt; &gt;&gt; 例子:&gt;&gt; ```java&gt; Class clazz = Student.class
+
+
+
+对象.getClass()
+123456&gt; ...
+            
+          </div>
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2024/07/31/JAVA%E5%8F%8D%E5%B0%84/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+
+
+
+
+
+
    
 
 
